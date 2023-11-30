@@ -31,3 +31,6 @@ jobs:
       - name: Black check
         run: |
           black . --check
+      - name: Isort check
+        run: |
+          isort . --check -q
