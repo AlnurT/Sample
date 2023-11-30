@@ -28,3 +28,6 @@ jobs:
           pip install poetry
           poetry config virtualenvs.create false
           poetry install --no-interaction --no-ansi
+      - name: Black check
+        run: |
+          black . --check
