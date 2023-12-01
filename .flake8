@@ -9,6 +9,8 @@ ignore =
     D200,
     # Missing docstring in __init__
     D107,
+    # Print found
+    T201,
 
 
 per-file-ignores =
