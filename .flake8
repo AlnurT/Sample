@@ -1,0 +1,28 @@
+[flake8]
+ignore =
+    # handled by black
+    E203, E501, W503,
+    ANN101, ANN204,
+    # no docstring in public package
+    D104,
+    # One-line docstring should fit on one line with quotes
+    D200,
+    # Missing docstring in __init__
+    D107,
+    # Print found
+    T201,
+
+
+per-file-ignores =
+    # No docs and annotation required for tests
+    test*.py: D10, D101, D103, S101, ANN
+    # Skip unused imports in __init__ files
+    __init__.py: F401
+    # Possible hardcoded password
+    webapp/webapp/settings.py: S105
+
+
+exclude =
+    venv
+max-cognitive-complexity = 7
+doctests = True
